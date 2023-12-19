@@ -240,9 +240,20 @@ console.log(divideArray(array,3));
 
 /* 9. Scrivi una funzione che accetti un numero positivo X come parametro. 
       La funzione dovrebbe stampare a console una “piramide” create con il carattere “#” e avente X strati. */
-
-      //uguale al numero 6??
-
+      function setPyramid(x) {
+        let pyramid = '';
+    
+        for (let i = 1; i <= x; i++) {
+            const hollowSpaces = ' '.repeat(x - i);
+            const blocks = '#'.repeat(2 * i - 1);
+            pyramid += hollowSpaces + blocks + hollowSpaces + '\n';
+        }
+    
+        return pyramid;
+    }
+    
+    console.log(setPyramid(10));
+      
 
 
 // 10. Scrivi una funzione che accetti un intero N e ritorni una matrice a spirale NxN:
