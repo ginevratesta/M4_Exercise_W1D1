@@ -1,3 +1,42 @@
+//Esercizio 1.
+function checkNum(a, b) {
+if(a === 50 || b === 50 || a + b === 50){
+    return true
+}
+else{
+    return false
+}
+}
+
+console.log(checkNum(25,25));
+
+
+//Esercizio 2.
+function newString(word, cutter){
+return word.slice(0, cutter) + word.slice(cutter +1)
+}
+
+console.log(newString("butterfly", 3 ));
+
+
+//Esercizio 3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ESERCIZI EXTRA:
 // NOTA: tutti gli esercizi devono essere svolti usando le funzioni.
 
