@@ -194,17 +194,55 @@ console.log(checkMostUsed(newSentence));
 
       console.log(changeOrder(268));
 
-      
+
 
 /* 6. Scrivi una funzione che accetti un numero positivo X come parametro. 
       La funzione dovrebbe stampare a console una “scala” creata con il carattere “#” e avente X scalini. */
+      function setStairs(x) {
+        let result = '';
+        for (let i = 1; i <= x; i++) {
+            let stairs = "#".repeat(i) + '\n';
+            result += stairs;
+        }
+        return result;
+    }
+    
+    console.log(setStairs(15));
+    
+
 
 // 7. Crea una funzione che, data una stringa come parametro, ritorni la stessa stringa, ma al contrario. Es. “Ciao” ****⇒ “oaiC”
+      function setInvertedString(animal){
+        const reversedName = animal.split('').reverse().join('');
+        return reversedName
+      }
+
+      console.log(setInvertedString("hippopotamus"));
+
+
 
 /* 8. Crea una funzione che accetti un array e un numero Y come parametro. Dividi l’array in sotto-array aventi lunghezza Y.
-      array: [1, 2, 3, 4, 5], y: 4 ⇒ [[ 1, 2, 3, 4], [5]] */
+array: [1, 2, 3, 4, 5], y: 4 ⇒ [[ 1, 2, 3, 4], [5]] */
+      function divideArray(array, y) {
+           const result = [];
+           for (let i = 0; i < array.length; i += y) {
+           const chunk = array.slice(i, i + y);
+            result.push(chunk);
+      }
+      return result;
+     }
+
+const array = [1, 2, 3, 4, 5];
+
+console.log(divideArray(array,3));
+
+
 
 /* 9. Scrivi una funzione che accetti un numero positivo X come parametro. 
       La funzione dovrebbe stampare a console una “piramide” create con il carattere “#” e avente X strati. */
+
+      //uguale al numero 6??
+
+
 
 // 10. Scrivi una funzione che accetti un intero N e ritorni una matrice a spirale NxN:
