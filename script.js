@@ -135,6 +135,7 @@ let newSentence = "under the weather";
 console.log(checkMostUsed(newSentence)); 
 
 
+
 /* 2. Controlla che due stringhe passate come parametri siano gli anagrammi l’una dell’altra. 
       Ignora punteggiatura e spazi e ricordate di rendere la stringa tutta in minuscolo. 
       Se le due parole sono anagrammi, ritorna `true`, altrimenti ritorna `false`. */
@@ -147,18 +148,31 @@ console.log(checkMostUsed(newSentence));
         return sortedFirst === sortedSecond
       }
       
-      console.log(checkSimilarity("ELECTION RESULT","LIE, LET'S RECOUNT"));
+      console.log(checkSimilarity("ELECTION RESULTS","LIES, LET'S RECOUNT"));
       
-
-
-
-
-
 
 
 /* 3. Partendo da una lista di possibili anagrammi e da una parola (entrambi passati come parametri), 
       ritorna un nuovo array contenente tutti gli anagrammi corretti della parola data.
       Per esempio, partendo da “cartine” e [”carenti”, “incerta”, “espatrio”], il valore ritornato deve essere [”carenti”, “incerta”]. */
+      const words = ["elbow", "silent", "rainbow"];
+      
+      function setNewArray(word, research){
+        let anagrams = [];
+        
+        for(let i = 0; i < research.length; i++){
+          const sortedWord = word.split('').sort().join('').toLowerCase();
+          const sortedResearch = research[i].split('').sort().join('').toLowerCase();
+          if(sortedWord === sortedResearch){
+            anagrams.push(research[i]) + anagrams.push(word)
+          }
+        }
+        return anagrams
+      }
+
+      console.log(setNewArray("below", words))
+
+
 
 // 4. Partendo da una stringa passata come parametro, ritorna `true` se la stringa è palindroma o `false` se non lo è.
 
