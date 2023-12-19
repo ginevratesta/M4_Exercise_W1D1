@@ -1,4 +1,4 @@
-//Esercizio 1.
+//Exercise 1.
 function checkNum(a, b) {
 if(a === 50 || b === 50 || a + b === 50){
     return true
@@ -11,7 +11,7 @@ else{
 console.log(checkNum(25,25));
 
 
-//Esercizio 2.
+//Exercise 2.
 function newString(word, cutter){
 return word.slice(0, cutter) + word.slice(cutter +1)
 }
@@ -19,7 +19,7 @@ return word.slice(0, cutter) + word.slice(cutter +1)
 console.log(newString("butterfly", 3 ));
 
 
-//Esercizio 3.
+//Exercise 3.
 function checkRange(c, d) {
     if ((c > 40 && c < 60 && d > 40 && d < 60) || (c > 70 && c < 100 && d > 70 && d < 100)) {
         return true;
@@ -32,7 +32,7 @@ console.log(checkRange(5, 82));
 
 
 
-//Esercizio 4.
+//Exercise 4.
 function checkCityName(city){
 if(city.startsWith("Los") || city.startsWith("New")){
     return city;
@@ -45,7 +45,7 @@ else{
 console.log(checkCityName("Los Angeles"));
 
 
-//Esercizio 5.
+//Exercise 5.
 const numbers = [25,36,82,105,1,2,3];
 
 function sumNumbers(number){
@@ -59,7 +59,7 @@ return sum;
 console.log(sumNumbers(numbers))
 
 
-//Esercizio 6.
+//Exercise 6.
 function checkNumber(number){
     for(let i = 0; i < number.length; i ++){
         if(number[i]=== 1 || number[i] === 3){
@@ -73,7 +73,7 @@ function checkNumber(number){
 console.log(checkNumber(numbers));
 
 
-//Esercizio 7.
+//Exercise 7.
 function checkAngleWidth(angle){
 if(angle < 90){
     return "acute angle"
@@ -92,7 +92,7 @@ if(angle = 180){
 console.log(checkAngleWidth(179));
 
 
-//Esercizio 8.
+//Exercise 8.
 let sentence = "Fabbrica Italiana Automobili Torino"
 
 function setAcronym(string){
