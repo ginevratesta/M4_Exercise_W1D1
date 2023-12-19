@@ -22,10 +22,10 @@ console.log(newString("butterfly", 3 ));
 //Esercizio 3.
 function checkRange(c,d){
 if(c && d > 40 && c && d < 60 || c && d > 70 && c && d < 100){
-    return true
+    return true;
 }
 else{
-    return false
+    return false;
 }
 }
 
@@ -35,15 +35,45 @@ console.log(checkRange(15, 82))
 //Esercizio 4.
 function checkCityName(city){
 if(city.startsWith("Los") || city.startsWith("New")){
-    return city
+    return city;
 }
 else{
-    return false
+    return false;
 }
 }
 
 console.log(checkCityName("Los Angeles"));
 
+
+//Esercizio 5.
+const numbers = [25,36,82,105,1,2,3];
+
+function sumNumbers(number){
+let sum = 0;
+for(let i = 0; i < number.length; i ++){
+    sum += number[i]
+}
+return sum;
+}
+
+console.log(sumNumbers(numbers))
+
+
+//Esercizio 6.
+function checkNumber(number){
+    for(let i = 0; i < number.length; i ++){
+        if(number[i]=== 1 || number[i] === 3){
+            return false;
+        }
+    }
+    return true;
+
+}
+
+console.log(checkNumber(numbers));
+
+
+//Esercizio 7.
 
 
 
