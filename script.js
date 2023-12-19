@@ -113,17 +113,48 @@ console.log(setAcronym(sentence));
    NOTA: tutti gli esercizi devono essere svolti usando le funzioni.*/
 
 // 1. Partendo da una stringa (passata come parametro), ritorna il carattere più usato nella stringa stessa.
-let newSentence = "under the weather"
+function checkMostUsed(word) {
+    const charCount = {};
+    let mostUsedChar = '';
+    let maxCount = 0;
 
-function checkMostUsed(word){}
+    for (const char of word) {
+        if (char !== ' ') {
+            charCount[char] = (charCount[char] || 0) + 1;
+            if (charCount[char] > maxCount) {
+                mostUsedChar = char;
+                maxCount = charCount[char];
+            }
+        }
+    }
 
-console.log(checkMostUsed(newSentence));
+    return mostUsedChar;
+}
 
+let newSentence = "under the weather";
+console.log(checkMostUsed(newSentence)); 
 
 
 /* 2. Controlla che due stringhe passate come parametri siano gli anagrammi l’una dell’altra. 
       Ignora punteggiatura e spazi e ricordate di rendere la stringa tutta in minuscolo. 
       Se le due parole sono anagrammi, ritorna `true`, altrimenti ritorna `false`. */
+      function checkSimilarity(first, second){
+        const cleanFirst = first.replace(/[',\s']/g, '').toLowerCase();
+        const cleanSecond = second.replace(/[',\s']/g, '').toLowerCase();
+        const sortedFirst = cleanFirst.split('').sort().join('');
+        const sortedSecond = cleanSecond.split('').sort().join('');
+      
+        return sortedFirst === sortedSecond
+      }
+      
+      console.log(checkSimilarity("ELECTION RESULT","LIE, LET'S RECOUNT"));
+      
+
+
+
+
+
+
 
 /* 3. Partendo da una lista di possibili anagrammi e da una parola (entrambi passati come parametri), 
       ritorna un nuovo array contenente tutti gli anagrammi corretti della parola data.
