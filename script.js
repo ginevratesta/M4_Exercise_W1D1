@@ -20,16 +20,16 @@ console.log(newString("butterfly", 3 ));
 
 
 //Esercizio 3.
-function checkRange(c,d){
-if(c && d > 40 && c && d < 60 || c && d > 70 && c && d < 100){
-    return true;
-}
-else{
-    return false;
-}
+function checkRange(c, d) {
+    if ((c > 40 && c < 60 && d > 40 && d < 60) || (c > 70 && c < 100 && d > 70 && d < 100)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-console.log(checkRange(15, 82))
+console.log(checkRange(5, 82));
+
 
 
 //Esercizio 4.
@@ -107,17 +107,6 @@ function setAcronym(string){
 }
 
 console.log(setAcronym(sentence));
-
-
-
-
-
-
-
-
-
-
-
 
 
 // ESERCIZI EXTRA:
