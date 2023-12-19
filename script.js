@@ -155,7 +155,7 @@ console.log(checkMostUsed(newSentence));
 /* 3. Partendo da una lista di possibili anagrammi e da una parola (entrambi passati come parametri), 
       ritorna un nuovo array contenente tutti gli anagrammi corretti della parola data.
       Per esempio, partendo da “cartine” e [”carenti”, “incerta”, “espatrio”], il valore ritornato deve essere [”carenti”, “incerta”]. */
-      const words = ["elbow", "silent", "rainbow"];
+      const words = ["silent", "elbow" ,"rainbow"];
       
       function setNewArray(word, research){
         let anagrams = [];
@@ -175,8 +175,26 @@ console.log(checkMostUsed(newSentence));
 
 
 // 4. Partendo da una stringa passata come parametro, ritorna `true` se la stringa è palindroma o `false` se non lo è.
+      function checkReverse(word){
+        const reversedWord = word.split('').reverse().join('').toLowerCase();
+
+       return reversedWord === word
+      }
+
+      console.log(checkReverse("radar"));
+
+
 
 // 5. Partendo da un numero intero (dai parametri) ritorna un numero che contenga le stesse cifre, ma in ordine contrario. Es. 189 ⇒ 981
+      function changeOrder(x){
+        const newOrder = parseInt(x.toString().split("").reverse().join(""));
+
+        return newOrder
+      }
+
+      console.log(changeOrder(268));
+
+      
 
 /* 6. Scrivi una funzione che accetti un numero positivo X come parametro. 
       La funzione dovrebbe stampare a console una “scala” creata con il carattere “#” e avente X scalini. */
