@@ -74,10 +74,39 @@ console.log(checkNumber(numbers));
 
 
 //Esercizio 7.
+function checkAngleWidth(angle){
+if(angle < 90){
+    return "acute angle"
+}
+if(angle === 90){
+    return "right angle"
+}
+if(angle > 90 && angle < 180){
+    return "obtuse angle"
+}
+if(angle = 180){
+    return "straight angle"
+}
+}
+
+console.log(checkAngleWidth(179));
 
 
+//Esercizio 8.
+let sentence = "Fabbrica Italiana Automobili Torino"
 
+function setAcronym(string){
+    const words = string.split(" ");
+    let initials = " ";
 
+    for (let i = 0; i < words.length; i++) {
+        initials += words[i].charAt(0); 
+    }
+
+    return initials;
+}
+
+console.log(setAcronym(sentence));
 
 
 
